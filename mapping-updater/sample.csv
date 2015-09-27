@@ -1,0 +1,3 @@
+The script ignores the very first line for comments etc
+oldname,newname,any random text
+name_old,name_new,some/more#randomicity
