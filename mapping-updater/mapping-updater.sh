@@ -66,16 +66,13 @@ do
 
 done
 
-if [ "$#" -eq 2 ]; then
-  echo "Finished creating ${replace_filename}. Replacing java files in $2 now..."
+echo "Finished creating ${replace_filename}. Replacing java files in $2 now..."
 
-  #single-threaded version
-  #find $path -type f -iname "*.java" -exec sed -f $replace_filename -i {} \;
+#single-threaded version
+#find $path -type f -iname "*.java" -exec sed -f $replace_filename -i {} \;
 
-  #parallel version
-  find $path -type f -iname "*.java" -print0 | xargs -0 -n 240 -P 8 sed -f $replace_filename -i
+#parallel version
+find $path -type f -iname "*.java" -print0 | xargs -0 -n 240 -P 8 sed -f $replace_filename -i
 
-  echo "Finished replacing. Stopping..."
-else
-  echo "No path specified, only created ${replace_filename}. Stopping..."
-fi
+echo "Finished replacing. Stopping..."
+
