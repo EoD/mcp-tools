@@ -46,6 +46,7 @@ fi
 
 #main bit
 replace_filename="mapping-updater.sed"
+rm ${replace_filename}	#reset file
 
 echo -n "Creating ${replace_filename} out of "
 printf '%s, ' "${files[@]}"
