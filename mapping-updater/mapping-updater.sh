@@ -66,7 +66,7 @@ do
 
 done
 
-echo "Finished creating ${replace_filename}. Replacing java files in $2 now..."
+echo "Finished creating ${replace_filename}. Replacing java files in $path now..."
 
 #single-threaded version
 #find $path -type f -iname "*.java" -exec sed -f $replace_filename -i {} \;
