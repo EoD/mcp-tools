@@ -1,8 +1,8 @@
 #This files contains mappings which changed from forge release 1.7.10 and the current MCPBot mappings
-\ballowedCharacters\b,allowedCharactersArray,
+allowedCharacters,allowedCharactersArray,
 allowedCharactersArrayArray,allowedCharactersArray,EoD: added to revert lines which hit twice
 closeInventory,closeChest,
-\bfontRenderer\b,fontRendererObj,this one might replace fontRendererObj with fontRendererObjObj hence \b
+fontRenderer,fontRendererObj,this one might replace fontRendererObj with fontRendererObjObj hence \b
 fontRendererObjObj,fontRendererObj,EoD: added to revert those which have been duplicated by accident
 getAccessibleSlotsFromSide,getSlotsForFace,
 getItemDamage,getMetadata,
@@ -20,3 +20,6 @@ setItemDamage,setMetadata,
 setMaxDamage,setMaxDurability,
 setMaxDurabilityPercent,setMaxDamagePercent,
 smelting(),instance(),EoD: intentionally added brackets because it is too general otherwise
+onEaten,onItemUseFinish,
+getPlayerCoordinates,getCommandSenderPosition,
+velocityToAddToEntity,modifyEntityVelocity,
