@@ -60,7 +60,7 @@ do
   do
       IFS="," read -ra mapping_line <<< "$line"
       
-      str_replace="s/${mapping_line[0]}/${mapping_line[1]}/g"
+      str_replace="s/\\b${mapping_line[0]}\\b/${mapping_line[1]}/g"
       echo $str_replace >> $replace_filename
   done < <(sed 1d "${file}")
 
